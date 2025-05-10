@@ -122,10 +122,10 @@ export class UserController {
   static async createUser(req: IncomingMessage, res: ServerResponse): Promise<void> {
     try {
       const body = await parseBody(req);
-      const { name, email, age } = body;
+      const { name, email, age, hobbies } = body;
 
       if (!name || !email) {
-        sendJson(res, 400, { message: "Name and email are required" });
+        sendJson(res, 400, { message: "Name, email, age, and hobbies are required" });
         return;
       }
 
@@ -135,6 +135,7 @@ export class UserController {
         name,
         email,
         age,
+        hobbies,
         createdAt: now,
         updatedAt: now,
       } as User);
