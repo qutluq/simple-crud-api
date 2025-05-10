@@ -7,7 +7,7 @@ config();
 
 const PORT = process.env.PORT || 3000;
 
-const server = createServer(async (req, res) => {
+export const server = createServer(async (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
