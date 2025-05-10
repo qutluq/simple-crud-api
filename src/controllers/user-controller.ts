@@ -70,7 +70,7 @@ export async function handleUserRequests(
       await UserController.getUserById(req, res);
     } else if (method === "POST" && !id) {
       await UserController.createUser(req, res);
-    } else if ((method === "PUT" || method === "PATCH") && id) {
+    } else if (method === "PUT" && id) {
       req.params = { id };
       await UserController.updateUser(req, res);
     } else if (method === "DELETE" && id) {
