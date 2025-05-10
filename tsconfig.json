@@ -1,0 +1,36 @@
+{
+  "extends": "ts-node/node16/tsconfig.json",
+
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
+    "compilerOptions": {
+    }
+  },
+
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["esnext", "DOM"],
+    "module": "CommonJS",
+    "rootDir": "./",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "outDir": "./dist",
+    "noEmitOnError": true,
+    "preserveConstEnums": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "skipLibCheck": true
+  },
+  "include": ["**/*.ts", "**/*.spec.ts"],
+  "exclude": ["node_modules", "dist/**"]
+}
